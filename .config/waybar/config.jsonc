@@ -1,0 +1,179 @@
+[
+    {
+        "name": "topbar",
+        "layer": "bottom",
+        "position": "top",
+        "height": 25,
+        "spacing": 5,
+
+        "modules-left": [
+            "clock",
+            "mpris"
+        ],
+
+        "modules-center": [
+            "hyprland/workspaces"
+        ],
+
+        "modules-right": [
+            "power-profiles-daemon",
+            "cpu",
+            "memory",
+            "temperature"
+        ],
+
+        "clock": {
+            "format": "{:%A %d/%m/%Y %I:%M %p}",
+            "tooltip": false
+        },
+
+        "mpris": {
+            "format": "|  {status_icon}  {title:.30} - {artist:.20}  {player_icon}",
+            "player-icons": {
+                "default": "",
+                "spotify": "",
+                "soundcloud": "󰓀",
+                "firefox": "",
+                "librewolf": "",
+                "chromium": "",
+                "youtube": ""
+            },
+            "status-icons": {
+                "playing": "󰏤",
+                "paused": ""
+            },
+            "on-click": "playerctl play-pause",
+            "tooltip": false
+        },
+
+        "hyprland/workspaces": {
+            "format": "{icon}",
+            "format-icons": {
+                "default": "",
+                "active": "",
+                "urgent": ""
+            },
+            "persistent-workspaces": {
+                "*": [1, 2, 3, 4, 5]
+            },
+            "format-active": "h",
+            "tooltip": false
+        },
+
+        "power-profiles-daemon": {
+            "format": "{icon}",
+            "format-icons": {
+                "default": "󱐋",
+                "performance": "󱐋",
+                "balanced": "",
+                "power-saver": ""
+            }
+        },
+
+        "cpu": {
+            "format": "{usage}% "
+        },
+
+        "memory": {
+            "format": "{}% ",
+            "tooltip-format": "{used}GiB of {total}GiB used ({percentage}%)\nSwap: {swapState}\nSwap Used: {swapUsed}GiB of {swapTotal}GiB ({swapPercentage}%)"
+        },
+
+        "temperature": {
+            "format": "{temperatureC}°C {icon}",
+            "format-icons": ["", "", ""],
+            "critical-threshold": 80,
+            "tooltip-format": "{temperatureC}°C\n{temperatureF}°F\n{temperatureK}K\n°C = (°F - 32) / 1.8\n°C = K - 273.15"
+        }
+
+    },
+
+    {
+        "name": "bottombar",
+        "layer": "bottom",
+        "position": "bottom",
+        "height": 25,
+        "spacing": 5,
+
+        "modules-left": [
+            "custom/media"
+        ],
+
+        "modules-right": [
+            "hyprland/language",
+            "custom/separator",
+            "backlight",
+            "wireplumber#sink",
+            "wireplumber#source",
+            "network",
+            "bluetooth",
+            "battery"
+        ],
+
+        "custom/media": {
+            "format": "󰣇",
+            "on-click": "alacritty",
+            "tooltip":false
+        },
+
+        "custom/separator": {
+            "format": "|",
+            "tooltip": false
+        },
+
+        "wireplumber#sink": {
+            "format": "{volume}% ",
+            "tooltip": false
+        },
+
+        "wireplumber#source": {
+            "node-type": "Audio/Source",
+            "format": "󰍬",
+            "format-muted": "󰍭",
+            "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+            "tooltip":false
+        },
+
+        "backlight": {
+            "format": "{percent}% ",
+            "tooltip-format": "Backlight (Brightness)"
+        },
+
+        "hyprland/language": {
+            "format-en": "EN",
+            "format-ar": "AR",
+            "tooltip": false
+        },
+
+        "battery": {
+            "interval": 1,
+            "states": {
+                "warning": 30,
+                "critical": 15
+            },
+            "format": "{capacity}% {icon}",
+            "format-charging": "{capacity}% 󱐋 {icon}",
+            "format-plugged": "{capacity}%  {icon}",
+            "format-icons": ["","","","",""],
+            "tooltip": false
+        },
+
+        "bluetooth": {
+            "format": "󰂯",
+            "format-on": "󰂯",
+            "format-off": "󰂲",
+            "format-disabled": "󰂲",
+            "format-connected": "󰂱",
+            "tooltip-format-connected": "Connected: {device_alias}",
+            "on-click": "rfkill toggle bluetooth"
+        },
+
+        "network": {
+            "format-wifi": "{signalStrength}% ",
+            "tooltip-format-wifi": "Connected: {essid}",
+            "format-disconnected": "󰖪",
+            "format-ethernet": "󰈁",
+            "tooltip-format-ethernet": "{ifname} {ipaddr}"
+        }
+    }
+]
