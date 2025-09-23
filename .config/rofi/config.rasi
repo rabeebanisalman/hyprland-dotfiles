@@ -1,0 +1,125 @@
+configuration {
+    modi: "drun";
+    font: "MesloLGS Nerd Font 10";
+    show-icons: true;
+    icon-theme: "Adwaita";
+    display-drun: "   ";
+    drun-display-format: "{icon} {name}";
+    scroll-method: 0;
+    disable-history: false;
+    sidebar-mode: false;
+    scrollbar: false;
+}
+
+/* all widgets */
+
+* {
+    /* set variable background */
+    background: #000000;
+    foreground: #ffffff;
+    
+    background-color: transparent;
+    border-radius: 0;
+}
+
+/* whole rofi window */
+
+window {
+    background-color: @background;
+    width: 700px;
+    border-radius: 0;
+    border: 2px;
+    border-color: #000000;
+}
+
+/* inputbar */
+
+entry {
+    placeholder: "";
+}
+
+inputbar {
+    background-color: #000000;
+    foreground-color: #ffffff;
+    border: 2px;
+    border-radius: 12px;
+    border-color: #ffffff;
+}
+
+num-filtered-rows,
+num-rows,
+textbox-num-sep {
+    enabled: false;
+}
+
+textbox-prompt-colon {
+    enabled: false;
+}
+
+/* listview and dashed line under input bar */
+
+listview {
+    border: 0;
+    border-color: transparent;
+    columns: 2;
+    lines: 8;
+    scrollbar: false;
+}
+
+/* element */
+
+element {
+    background-color: transparent;
+    foreground-color: #ffffff;
+    padding: 6px 8px;
+}
+
+element normal.normal {
+    background-color: transparent;
+    
+}
+
+element normal.active {
+    background-color: transparent;
+}
+
+element normal.urgent {
+    background-color: transparent;
+}
+
+element alternate.normal {
+    background-color: transparent;
+}
+
+element alternate.active {
+    background-color: transparent;
+}
+
+element alternate.urgent {
+    background-color: transparent;
+}
+
+element selected.normal {
+    background-color: transparent;
+    border: 2px;
+    border-radius: 20;
+    border-color: #ffffff;
+}
+
+element selected.active {
+    background-color: transparent;
+    border: 2px;
+    border-radius: 20;
+    border-color: #ffffff;
+}
+
+element selected.urgent {
+    background-color: transparent;
+    border: 2px;
+    border-radius: 20;
+    border-color: #ffffff;
+}
+
+element-icon {
+    size: 20px;
+}
