@@ -29,6 +29,10 @@ window#waybar.topbar {
     padding-right: 10px;
 }
 
+#mpris.emoji {
+    font-family: "Noto Color Emoji";
+}
+
 #workspaces {
     background-color: #000000;
     margin-top: 2px;
