@@ -102,8 +102,8 @@
             "hyprland/language",
             "custom/separator",
             "backlight",
-            "wireplumber#sink",
-            "wireplumber#source",
+            "pulseaudio#sink",
+            "pulseaudio#source",
             "network",
             "bluetooth",
             "battery"
@@ -120,12 +120,12 @@
             "tooltip": false
         },
 
-        "wireplumber#sink": {
+        "pulseaudio#sink": {
             "format": "{volume}% ",
             "tooltip": false
         },
 
-        "wireplumber#source": {
+        "pulseaudio#source": {
             "node-type": "Audio/Source",
             "format": "󰍬",
             "format-muted": "󰍭",
