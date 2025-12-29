@@ -9,6 +9,7 @@ configuration {
     disable-history: false;
     sidebar-mode: false;
     scrollbar: false;
+    kb-cancel: "Escape";
 }
 
 /* all widgets */
@@ -17,19 +18,18 @@ configuration {
     /* set variable background */
     background: #000000;
     foreground: #ffffff;
-    
+
     background-color: transparent;
-    border-radius: 0;
 }
 
 /* whole rofi window */
 
 window {
     background-color: @background;
-    width: 700px;
-    border-radius: 0;
-    border: 2px;
-    border-color: #000000;
+    width: 250px;
+    border: 1px;
+    border-color: transparent;
+    location: south;
 }
 
 /* inputbar */
@@ -42,7 +42,6 @@ inputbar {
     background-color: #000000;
     foreground-color: #ffffff;
     border: 2px;
-    border-radius: 12px;
     border-color: #ffffff;
 }
 
@@ -61,8 +60,6 @@ textbox-prompt-colon {
 listview {
     border: 0;
     border-color: transparent;
-    columns: 2;
-    lines: 8;
     scrollbar: false;
 }
 
@@ -71,12 +68,11 @@ listview {
 element {
     background-color: transparent;
     foreground-color: #ffffff;
-    padding: 6px 8px;
+    padding: 3px 5px;
 }
 
 element normal.normal {
     background-color: transparent;
-    
 }
 
 element normal.active {
@@ -102,21 +98,18 @@ element alternate.urgent {
 element selected.normal {
     background-color: transparent;
     border: 2px;
-    border-radius: 20;
     border-color: #ffffff;
 }
 
 element selected.active {
     background-color: transparent;
     border: 2px;
-    border-radius: 20;
     border-color: #ffffff;
 }
 
 element selected.urgent {
     background-color: transparent;
     border: 2px;
-    border-radius: 20;
     border-color: #ffffff;
 }
 

@@ -97,6 +97,7 @@ window#waybar.bottombar {
   color: #ffffff;
 }
 
+#custom-power,
 #custom-media,
 #backlight,
 #pulseaudio.sink,

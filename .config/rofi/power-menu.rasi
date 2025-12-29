@@ -1,0 +1,30 @@
+* {
+    background-color: #000000;
+    text-color: #ffffff;
+    padding: 1px;
+}
+
+window {
+    width: 200px;
+    border: 5px;
+    location: south west;
+}
+
+listview {
+    lines: 6;
+}
+
+inputbar {
+    enabled: false;
+}
+
+element {
+    padding: 1px;
+}
+
+element selected {
+    background-color: #000000;
+    text-color: #ffffff;
+    border: 1px;
+    border-color: #ffffff;
+}

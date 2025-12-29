@@ -95,6 +95,10 @@
         "spacing": 5,
 
         "modules-left": [
+            "custom/power"
+        ],
+
+        "modules-center": [
             "custom/media"
         ],
 
@@ -109,10 +113,16 @@
             "battery"
         ],
 
+        "custom/power": {
+            "format": "󰐥",
+            "tooltip": false,
+            "on-click": "rofi -show menu -modi menu:rofi-power-menu -theme ~/.config/rofi/power-menu.rasi"
+        },
+
         "custom/media": {
             "format": "󰣇",
-            "on-click": "alacritty",
-            "tooltip":false
+            "tooltip": false,
+            "on-click": "rofi -show drun"
         },
 
         "custom/separator": {
@@ -122,7 +132,8 @@
 
         "pulseaudio#sink": {
             "format": "{volume}% ",
-            "tooltip": false
+            "tooltip": false,
+            "on-click": "pavucontrol"
         },
 
         "pulseaudio#source": {
@@ -164,7 +175,7 @@
             "format-disabled": "󰂲",
             "format-connected": "󰂱",
             "tooltip-format-connected": "Connected: {device_alias}",
-            "on-click": "rfkill toggle bluetooth"
+            "on-click": "blueman-manager"
         },
 
         "network": {
@@ -172,7 +183,8 @@
             "tooltip-format-wifi": "Connected: {essid}",
             "format-disconnected": "󰖪",
             "format-ethernet": "󰈁",
-            "tooltip-format-ethernet": "{ifname} {ipaddr}"
+            "tooltip-format-ethernet": "{ifname} {ipaddr}",
+            "on-click": "networkmanager_dmenu"
         }
     }
 ]
