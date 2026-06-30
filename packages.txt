@@ -17,3 +17,4 @@ spotify
 hypridle
 hyprlock
 hyprpaper
+rofi-power-menu
