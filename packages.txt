@@ -18,3 +18,4 @@ hypridle
 hyprlock
 hyprpaper
 rofi-power-menu
+power-profiles-daemon
