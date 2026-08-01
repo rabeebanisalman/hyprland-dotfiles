@@ -3,7 +3,10 @@ neofetch
 waybar
 rofi
 brightnessctl
-pulseaudio
+pipewire
+pipewire-pulse
+pipewire-alsa
+wireplumber
 pavucontrol
 blueman
 networkmanager-dmenu
