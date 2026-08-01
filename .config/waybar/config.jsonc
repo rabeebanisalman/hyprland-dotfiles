@@ -106,8 +106,8 @@
             "hyprland/language",
             "custom/separator",
             "backlight",
-            "pulseaudio#sink",
-            "pulseaudio#source",
+            "wireplumber",
+            "wireplumber#microphone",
             "network",
             "bluetooth",
             "battery"
@@ -130,13 +130,15 @@
             "tooltip": false
         },
 
-        "pulseaudio#sink": {
-            "format": "{volume}% ",
+        "wireplumber": {
+            "format": "{volume}% {icon}",
+            "format-icons": ["󰕿","󰖀","󰕾"],
+            "format-muted": "󰝟",
             "tooltip": false,
             "on-click": "pavucontrol"
         },
 
-        "pulseaudio#source": {
+        "wireplumber#microphone": {
             "node-type": "Audio/Source",
             "format": "󰍬",
             "format-muted": "󰍭",
@@ -145,7 +147,8 @@
         },
 
         "backlight": {
-            "format": "{percent}% ",
+            "format": "{percent}% {icon}",
+            "format-icons": ["󰃞","󰃟","󰃠"],
             "tooltip-format": "Backlight (Brightness)"
         },
 
