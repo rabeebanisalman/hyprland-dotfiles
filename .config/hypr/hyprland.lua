@@ -4,10 +4,18 @@
 
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
 hl.monitor({
-    output   = "",
+    output   = "eDP-1",
     mode     = "preferred",
     position = "auto",
     scale    = "auto",
+})
+
+hl.monitor({
+    output = "HDMI-A-1",
+    mode = "preferred",
+    position = "auto",
+    scale = "auto",
+    mirror = "eDP-1"
 })
 
 -- programs
@@ -15,7 +23,7 @@ hl.monitor({
 local terminal    = "alacritty"
 local fileManager = "dolphin"
 local menu        = "rofi -show drun"
-local screenshot = grim
+local screenshot = "grim"
 
 
 -- autostart
@@ -201,10 +209,11 @@ local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
-hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + V", hl.dsp.window.fullscreen({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
+hl.bind(mainMod .. " + G", hl.dsp.exec_cmd(screenshot))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
